@@ -26,7 +26,7 @@ pipeline{
         stage('Report'){
             steps{
                 echo "This stage genarates a report"
-                sh "printf \"${params.CHANGELOG}\" > ${params.ENVIRONMENT}.txt"
+                bat "printf \"${params.CHANGELOG}\" > ${params.ENVIRONMENT}.txt"
                 archiveArtifacts allowEmptyArchive: true, 
                 artifacts: '.*txt', 
                 fingerprint: true, 
