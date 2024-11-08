@@ -22,33 +22,36 @@ formyproject-automation-selenium is a Java-based automation project built with S
 ## Installation
 
 ### Clone the Repository
-1. Clone the repository:
+**1. Clone the repository:**
+
     git clone https://github.com/username/formy-automation-selenium.git
 
-2. Set Up Sauce Labs Credentials
+**2. Set Up Sauce Labs Credentials**
+
     Export Sauce Labs credentials as environment variables:
 
          export SAUCE_USERNAME=your-username
          export SAUCE_ACCESS_KEY=your-access-key
 
- 3. Configure Sauce Labs
+**3. Configure Sauce Labs**
+
      Specify Sauce Labs configurations in your Selenium setup.
 
-DesiredCapabilities caps = new DesiredCapabilities();
+                DesiredCapabilities caps = new DesiredCapabilities();
 
-caps.setCapability("platformName", "Windows 10");
+                caps.setCapability("platformName", "Windows 10");
 
-caps.setCapability("browserName", "chrome");
+                caps.setCapability("browserName", "chrome");
 
-caps.setCapability("browserVersion", "latest");
+                caps.setCapability("browserVersion", "latest");
 
-caps.setCapability("sauce:options", sauceOptions);
+                caps.setCapability("sauce:options", sauceOptions);
 
 **Running Tests on Sauce Labs**
 
-Run Locally: npm run test:local
+      Run Locally: npm run test:local
 
-Run on Sauce Labs: npm run test:saucelabs
+      Run on Sauce Labs: npm run test:saucelabs
 
 ## Viewing Results in Sauce Labs
 
@@ -59,11 +62,11 @@ Run on Sauce Labs: npm run test:saucelabs
 
 **Test Configuration Options**
 
-platformName: OS (e.g., Windows 10)
+        platformName: OS (e.g., Windows 10)
 
-browserName: Browser (e.g., chrome)
+        browserName: Browser (e.g., chrome)
 
-browserVersion: Browser version (e.g, latest)
+        browserVersion: Browser version (e.g, latest)
 
 
 
